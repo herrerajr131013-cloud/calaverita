@@ -1,0 +1,229 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #7600a8, #35004f);
+    color: white;
+    text-align: center;
+    transition: background 0.5s ease;
+    overflow-x: hidden;
+}
+
+/* ENCABEZADO */
+
+.encabezado {
+    padding: 30px 15px 20px;
+}
+
+.encabezado h1 {
+    color: #ffcc35;
+    font-size: clamp(28px, 5vw, 48px);
+    text-transform: uppercase;
+    text-shadow: 3px 3px #8b174d;
+    margin: 10px;
+}
+
+.encabezado p {
+    font-size: 17px;
+}
+
+.decoracion {
+    font-size: 45px;
+}
+
+/* CONTENEDOR PRINCIPAL */
+
+.contenedor {
+    width: min(90%, 900px);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+/* TARJETA DE LA CALAVERITA */
+
+.tarjeta-calavera {
+    width: min(100%, 420px);
+    padding: 25px;
+    border: 3px solid #ffbd2e;
+    border-radius: 25px;
+    background: rgba(32, 0, 49, 0.85);
+    box-shadow: 0 0 25px rgba(255, 193, 48, 0.35);
+}
+
+.ilustracion {
+    position: relative;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ffb52e, #f45b69);
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.calavera {
+    font-size: 115px;
+    animation: flotar 3s ease-in-out infinite;
+}
+
+.flor {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 35px;
+}
+
+.flor2 {
+    top: auto;
+    left: auto;
+    bottom: 15px;
+    right: 20px;
+}
+
+.dulce {
+    position: absolute;
+    bottom: 15px;
+    left: 25px;
+    font-size: 30px;
+}
+
+.tarjeta-calavera h2 {
+    color: #ffcc35;
+    font-size: 26px;
+    margin-top: 25px;
+}
+
+.poema {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.firma {
+    color: #ffbd2e;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/* BOTONES */
+
+.controles {
+    width: min(100%, 500px);
+    padding: 20px;
+}
+
+.controles h2 {
+    color: #ffcc35;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+button {
+    padding: 15px 25px;
+    border: 2px solid #ffbd2e;
+    border-radius: 12px;
+    background: #29003e;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 18px rgba(255, 193, 48, 0.5);
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+/* BOTÓN DE DULCE */
+
+.boton-dulce {
+    background: #ffbd2e;
+    color: #390052;
+}
+
+/* MENSAJE */
+
+#mensaje {
+    min-height: 25px;
+    color: #ffda70;
+    font-weight: bold;
+}
+
+/* DULCES ANIMADOS */
+
+.dulce-caida {
+    position: fixed;
+    top: -50px;
+    z-index: 100;
+    pointer-events: none;
+    animation: caer 4s linear forwards;
+}
+
+/* ANIMACIONES */
+
+@keyframes flotar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes caer {
+    from {
+        transform: translateY(-50px) rotate(0deg);
+    }
+
+    to {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    padding: 25px 10px;
+    margin-top: 20px;
+    color: #ffdc8a;
+}
+
+.creditos {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 480px) {
+    .tarjeta-calavera {
+        padding: 18px;
+    }
+
+    .poema {
+        font-size: 16px;
+    }
+
+    button {
+        padding: 13px 17px;
+    }
+}
